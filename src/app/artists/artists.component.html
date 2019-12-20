@@ -1,0 +1,9 @@
+<h2>Mis Artistas</h2>
+<input type="text" [(ngModel)]="artist">
+<button (click)="searchArtist()">Buscar Artista</button>
+<ul class="artists">
+  <li *ngFor="let artist of artists">   
+    <img height="64" width="64" src="{{artist.images[2].url}}"/>
+    <a routerLink='{{artist.id}}/albums'>{{artist.name}}</a>
+  </li>
+</ul>

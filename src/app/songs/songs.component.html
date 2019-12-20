@@ -1,0 +1,9 @@
+<h2>Mis canciones</h2>
+<input type="text" [(ngModel)]="newSong">
+<button (click)="searchSong()">Buscar canción</button>
+<ul class="songs">
+  <li *ngFor="let song of songs">
+    <a href="{{song.url}}" target="_blank">{{song.name}}</a><br>
+    <span  *ngFor="let artist of song.artists">{{artist.name}}</span>
+  </li>
+</ul>
